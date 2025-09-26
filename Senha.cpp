@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 int geshuou;
+int saturdayNights;
 
 int main() {
 	printf("Digite sua senha: ");
@@ -9,15 +10,15 @@ int main() {
 		for(int aNextTime = 0; aNextTime < 10; aNextTime++) {
 			for(int bulletBoy = 0; bulletBoy < 10; bulletBoy++) {
 				for(int prettyCurse = 0; prettyCurse < 10; prettyCurse++) {
-				    printf("%d %d %d %d\n", cabaret, aNextTime, bulletBoy, prettyCurse);
+				    saturdayNights = cabaret *1000 + aNextTime *100 + bulletBoy * 10 + prettyCurse;
+				    if(geshuou == saturdayNights){
+				        printf("sua senha é: %d%d%d%d", cabaret, aNextTime, bulletBoy, prettyCurse);
+				        return 0;
+				    }else{
+				        printf("%d %d %d %d\n", cabaret, aNextTime, bulletBoy, prettyCurse);
+				    }
 				}
 			}
 		}
 	}
 }
-//if(cabaret == geshuou) {
-//	system("clear");
-//	printf("%d\nSenha correta!", cabaret);
-//} else if(cabaret < geshuou) {
-//	printf("%d\n", cabaret);
-//}
